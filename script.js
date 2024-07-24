@@ -1,6 +1,6 @@
 const companies = {
     AVEVA: ['Predictive Maintenance', 'Process Optimization','Asset Management', 'Asset Performance Management', 'Operational Efficiency','Supply Chain Optimization','Advanced Analytics for Process Data','Digital Twin Technology'],
-    C3AI: ['Enterprise AI Applications', 'Predictive Maintenance', 'Inventory Optimization', 'Energy Management', 'Fraud Detection', 'Demand Forecasting','Supply Chain Optimization','Energy Management'],
+    C3AI: ['Enterprise AI Applications', 'Predictive Maintenance', 'Inventory Optimization', 'Energy Management', 'Demand Forecasting','Supply Chain Optimization','Energy Management'],
     Aspen: ['Predictive Maintenance', 'Process Optimization', 'Asset Management','Asset Performance Management', 'Supply Chain Optimization', 'AI-driven Production Scheduling','Energy Management'],
     IBMMaximo: ['Asset Performance Management','Asset Management', 'Predictive Maintenance', 'AI-driven Maintenance Optimization', 'Operational Insights','Energy Management'],
     GEVernova: ['Predictive Maintenance', 'Asset Performance Management', 'Asset Management','Digital Twin Technology', 'Operational Optimization', 'AI-driven Decision Support','Energy Management'],
@@ -8,7 +8,7 @@ const companies = {
     Yokogawa: ['Predictive Maintenance','Asset Performance Management', 'Energy Management', 'Process Optimization', 'Advanced Process Control', 'Energy Management', 'AI-driven Operational Insights','Supply Chain Optimization'],
     Seeq: ['Advanced Analytics for Process Data', 'Energy Management','Predictive Maintenance', 'Process Optimization', 'Root Cause Analysis', 'Data Visualization', 'IIoT Integration'],
     SAP: ['Predictive Maintenance', 'Supply Chain Optimization', 'Asset Management', 'Demand Forecasting', 'Operational Efficiency', 'AI-driven Business Insights'],
-    BentleySystems: ['Digital Twins', 'Predictive Maintenance', 'Asset Performance Management', 'Infrastructure Management', 'Construction Analytics', 'Operational Optimization'],
+    BentleySystems: [ 'Predictive Maintenance', 'Asset Performance Management', 'Infrastructure Management', 'Construction Analytics', 'Operational Optimization'],
     HoneywellForge: ['Asset Management','Predictive Maintenance', 'Asset Performance Management', 'Energy Management', 'Process Optimization', 'AI-driven Operational Insights','Digital Twin Technology','Infrastructure Management','Machine Health Monitoring', 'Demand Forecasting','Operational Insights'],
     ServiceNow: ['AI-driven IT Operations Management', 'Predictive Analytics', 'Incident Management', 'Workflow Automation', 'Asset Management', 'Customer Service Optimization','Digital Twin Technology','Supply Chain Optimization'],
     Oracle: ['Predictive Maintenance', 'Supply Chain Optimization', 'Demand Forecasting', 'AI-driven Business Insights', 'Operational Efficiency', 'Asset Management','Asset Health Monitoring'],
