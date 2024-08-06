@@ -92,18 +92,7 @@ function updateFeatureButtons() {
         }
     });
 }
-function togglePopup() {
-    const popup = document.getElementById('infoPopup');
-    popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
-}
 
-// Close the popup if the user clicks outside of it
-window.onclick = function(event) {
-    const popup = document.getElementById('infoPopup');
-    if (event.target !== popup && !popup.contains(event.target) && event.target.className !== 'info-icon') {
-        popup.style.display = 'none';
-    }
-}
 document.addEventListener('DOMContentLoaded', () => {
     const featureBoxesContainer = document.getElementById('feature-boxes');
     const allFeatures = Array.from(new Set(Object.values(companies).flat()));
