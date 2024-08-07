@@ -41,7 +41,34 @@ const companyColors = {
 };
 
 let selectedCompanies = [];
+function showCompanies(companies) {
+    const infoPopup = document.getElementById('infoPopup');
+    const companyInfo = document.getElementById('companyInfo');
+    companyInfo.innerHTML = '';
+    
+    companies.forEach(company => {
+        const companyColor = companyColors[company];
+        const companyDiv = document.createElement('div');
+        companyDiv.style.color = companyColor;
+        companyDiv.textContent = company;
+        companyInfo.appendChild(companyDiv);
+    });
 
+    infoPopup.style.display = 'block';
+}
+
+function togglePopup() {
+    const popup = document.getElementById('infoPopup');
+    popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+}
+
+// Close the popup if the user clicks outside of it
+window.onclick = function(event) {
+    const popup = document.getElementById('infoPopup');
+    if (event.target !== popup && !popup.contains(event.target) && event.target.className !== 'info-icon') {
+        popup.style.display = 'none';
+    }
+}
 
 function toggleCompanySelection(companyKey) {
     const index = selectedCompanies.indexOf(companyKey);
