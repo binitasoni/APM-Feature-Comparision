@@ -41,32 +41,30 @@ const companyColors = {
 };
 
 let selectedCompanies = [];
-function showCompanies(companies) {
-    const infoPopup = document.getElementById('infoPopup');
-    const companyInfo = document.getElementById('companyInfo');
-    companyInfo.innerHTML = '';
-    
-    companies.forEach(company => {
-        const companyColor = companyColors[company];
-        const companyDiv = document.createElement('div');
-        companyDiv.style.color = companyColor;
-        companyDiv.textContent = company;
-        companyInfo.appendChild(companyDiv);
-    });
 
-    infoPopup.style.display = 'block';
-}
 
 function togglePopup() {
     const popup = document.getElementById('infoPopup');
-    popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
-}
+    popup.style.display = popup.style.display === 'none' || popup.style.display === '' ? 'block' : 'none';
 
-// Close the popup if the user clicks outside of it
-window.onclick = function(event) {
-    const popup = document.getElementById('infoPopup');
-    if (event.target !== popup && !popup.contains(event.target) && event.target.className !== 'info-icon') {
-        popup.style.display = 'none';
+    if (popup.style.display === 'block') {
+        const legendContainer = document.getElementById('companyLegend');
+        legendContainer.innerHTML = '';
+        for (const [company, color] of Object.entries(companyColors)) {
+            const legendItem = document.createElement('div');
+            legendItem.classList.add('legend-item');
+
+            const colorBox = document.createElement('div');
+            colorBox.classList.add('legend-color');
+            colorBox.style.backgroundColor = color;
+
+            const companyName = document.createElement('span');
+            companyName.textContent = company;
+
+            legendItem.appendChild(colorBox);
+            legendItem.appendChild(companyName);
+            legendContainer.appendChild(legendItem);
+        }
     }
 }
 
