@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="info-icon-container">
+        <span class="info-icon" onclick="togglePopup()">i</span>
+        <div id="infoPopup" class="info-popup">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p>This is the information you want to display in the popup. You can add more details here.</p>
+        </div>
+    </div>
+    
     <h2>Select Companies</h2>
     <div id="product-selector">
         <button id="AVEVA" onclick="toggleCompanySelection('AVEVA')">AVEVA</button>
